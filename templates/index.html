@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Elemental Spelling</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <h1 class="text-center">Elemental Spelling</h1>
+        <p class="text-center">Create a spelling for a word using only chemical elements.</p>
+        <form class="form-inline" action="/" method="POST">
+            <div class="form-group mx-auto">
+                <input class="form-control" type="text" name="input">
+                <button type"button" class="btn btn-primary mx-sm-3">Spell!</button>
+            </div>
+        </form>
+        <br>
+        <div class="container-fluid">
+            {{ $length := len .result }} {{ if gt $length 0 }}
+                <div class="row justify-content-md-center">
+                    {{ range $elem := .result }}
+                        <div class="elements text-center {{$elem.Group}}">
+                            <p>{{$elem.AtomNum}}</p>
+                            <h1>{{$elem.Symbol}}</h1>
+                            <p>{{$elem.Name}}</p>
+                            <p>{{$elem.AtomWt}}</p>
+                        </div>
+                    {{ end }} 
+                </div>       
+                <br>
+            {{ else if .spellReq }}
+                <h4 class="text-center">There is no spelling for that word. Try again!</h4>
+            {{ end }}
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col AM legend">Alkali metals</div>
+                <div class="col AEM legend">Alkaline-earth metals</div>
+                <div class="col TM legend">Transition metals</div>
+                <div class="col PTM legend">Post-transition metals</div>
+                <div class="col M legend">Metalloids</div>
+            </div>
+            <div class="row">
+                <div class="col H legend">Halogens</div>
+                <div class="col NG legend">Noble gases</div>
+                <div class="col NM legend">Non-metals</div>
+                <div class="col L legend">Lanthanides</div>
+                <div class="col A legend">Actinides</div>
+            </div>
+        </div>
+        <hr>
+    
+        <blockquote class="blockquote text-center">
+            <footer class="h6">&#169; Copyright 2020.</footer>
+            <a href="https://github.com/anna-liang/elemental-spelling" target="_blank">
+                <img alt="github logo" src="/static/GitHub-Mark-32px.png">
+            </a>
+        </blockquote>
+    </body>
+</html>

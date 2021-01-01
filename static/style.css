@@ -1,0 +1,50 @@
+.AM {
+    background-color: #EB5834;
+}
+
+.AEM {
+    background-color: #F1A91E;
+}
+
+.TM {
+    background-color: #ABCBFF;
+}
+
+.PTM {
+    background-color: #C684EE;
+}
+
+.M {
+    background-color: #F1EE1E;
+}
+
+.NM {
+    background-color: #B1FFB1;
+}
+
+.H {
+    background-color: #FFC6F6;
+}
+
+.NG {
+    background-color: #C8C8C8;
+}
+
+.L {
+    background-color: #3266BA;
+}
+
+.A {
+    background-color: #3CE7B8;
+}
+
+.elements {
+    width: 13rem;
+    height: 13rem;
+    padding-top: 1.5%;
+    margin: 2px;
+}
+
+.legend {
+    margin: 1px
+}
