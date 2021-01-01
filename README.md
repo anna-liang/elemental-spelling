@@ -26,3 +26,4 @@ When everything has been installed, run the application with the following comma
 ```bash
 go run .
 ```
+View the application at [localhost:8080](http://localhost:8080/)
