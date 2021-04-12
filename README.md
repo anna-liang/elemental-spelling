@@ -13,9 +13,9 @@ Elemental Spelling creates a spelling for a word using only chemical elements.
 
 1. [Install Go](https://golang.org/doc/install)
 
-2. Make sure your GOPATH environment variable
+2. Make sure your GOPATH environment variable is set
 
-3. Install the required Go packages by doing:
+3. Install the required Go packages with the following command:
 ```bash
 go get <package>
 ```
